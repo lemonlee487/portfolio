@@ -1,14 +1,16 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
+import About from './pages/About';
+import NavBar from './components/NavBar'
 import Particles from 'react-particles-js';
 
 function App() {
   return (
     <>
-      <Route path='/' component={Home} />
+      <NavBar />
       <Particles
         className='particles-canvas'
         params={{
@@ -30,6 +32,10 @@ function App() {
           }
         }}
       />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+      </Switch>
     </>
   );
 }
