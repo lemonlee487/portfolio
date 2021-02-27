@@ -4,7 +4,7 @@
   --primary-white: #fff;
   --primary-orange: #f9ab00;
   --secondary-orange: #ffcf66;
-  --primary_red: #ef4036;
+  --primary-red: #ef4036;
   --primary-hover-red: #f33501;
   --primary-dark: rgba(255, 255, 255, 0);
   --yummy-burgundy: #513;
@@ -19,7 +19,6 @@ body {
   font-family: "Roboto Condesed" , sans-serif;
 }
 
-
 /**************************** NavBAR ****************************/
 nav {
   z-index: 2;
@@ -33,11 +32,11 @@ nav ul li {
   text-transform: uppercase;
 }
 
-.navbar-nav > li > a {
+.navbar-nav > li > .nav-link {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-bottom: 0.1975rem solid var(--primary-dark);
+  /* border-bottom: 0.1975rem solid var(--primary-dark);  */
 }
 
 .navbar-brand {
@@ -51,13 +50,14 @@ nav ul li {
   letter-spacing: 0.0375rem;
   cursor: pointer;
 }
-/*
+
 .nav-link.active, .nav-link:focus { 
   border-bottom: 0.1975rem solid var(--primary-orange);
-}*/
+}
 
 .nav-link:hover {
-  border-bottom: 0.1975rem solid var(--primary-orange)
+  /* border-bottom: 0.1975rem solid var(--primary-orange); */
+  background: var(--secondary-orange)
 }
 
 
@@ -131,20 +131,21 @@ nav ul li {
 
 /********************************* Particles **************************************/
 .tsparticles-canvas-el {
+  background: #282c34;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 
 /********************************* About **************************************/
-.about-avatar {
+.card-avatar {
   width: 15rem;
   margin: auto;
 }
 
-.about-wrapper {
+.card-wrapper {
   background-color: #282c34;
   position:relative;
   background-size: cover;
